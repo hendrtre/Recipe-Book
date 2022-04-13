@@ -1,7 +1,7 @@
 const Header = () => {
     return (
       <h1 className="heading">
-        FAQ help section 
+        Recipe help section 
       </h1>
     ) 
   };

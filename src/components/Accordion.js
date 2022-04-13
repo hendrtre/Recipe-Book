@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { faqs } from "../data";
+import { Recipes } from "../data";
 import AccordionItem from "./AccordionItem";
 
 const Accordion = () => {
@@ -14,12 +14,12 @@ const Accordion = () => {
 
   return (
     <ul className="accordion">
-      {faqs.map((faq, index) => (
+      {Recipes.map((Recipe, index) => (
         <AccordionItem 
          onToggle={() => handleToggle(index)}
          active={clicked === index}
          key={index} 
-         faq={faq} 
+         Recipe={Recipe} 
          />
       ))}
     </ul>

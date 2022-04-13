@@ -15,7 +15,6 @@ function App() {
         <div className='container'>
           <h1>Trents Recipe Book</h1>
           <Header />
-                {/* ... */}
           <Accordion /> 
         </div>
       </div>
