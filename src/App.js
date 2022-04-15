@@ -1,23 +1,43 @@
 import React from 'react'
 import './App.css';
+import {BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+
+import TestImage from './images/pirateCoin.jpg'
+
 import Header from './components/Header'; 
 import Accordion from './components/Accordion'; 
+import AddRecipePage from './addRecipePage';
 
 function App() {
-  // const accordianData = {
-  //   title: "Ratatouille",
-  //   directions: '1. Preheat Oven and Prepare Ratatouille Ingredients: Preheat oven ',
-  // }
-  // const { title, content } = accordianData
+const Home = () => {
+  return (
+    <div className='container'>
+      <h1>Test</h1>
+      <img src={TestImage} alt="ImageHere" />
+      <Accordion />
+
+    </div>
+  )
+}
+
 
   return (
-      <div className="App">
-        <div className='container'>
-          <h1>Trents Recipe Book</h1>
-          <Header />
-          <Accordion /> 
+    <Router>
+      <div className='Links'>
+        <h1 className='heading'>hendrickson digital recipe book</h1>
+        <div className='pages'>
+          <Link to="/">Back</Link>
+          <Link to="/add-recipe">+ Add Recipe</Link>
         </div>
       </div>
+      
+      <Routes>
+        <Route path="/" element={<Home />} />
+
+        <Route path="/add-recipe" element={<AddRecipePage />} />
+      </Routes>
+    </Router>
+
   );
 }
 
