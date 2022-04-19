@@ -2,24 +2,10 @@ import React from 'react'
 import './App.css';
 import {BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 
-import TestImage from './images/pirateCoin.jpg'
-
-import Header from './components/Header'; 
-import Accordion from './components/Accordion'; 
+import Home from './components/Home'; 
 import AddRecipePage from './addRecipePage';
 
 function App() {
-const Home = () => {
-  return (
-    <div className='container'>
-      <h1>Test</h1>
-      <img src={TestImage} alt="ImageHere" />
-      <Accordion />
-
-    </div>
-  )
-}
-
 
   return (
     <Router>
@@ -28,6 +14,8 @@ const Home = () => {
         <div className='pages'>
           <Link to="/">Back</Link>
           <Link to="/add-recipe">+ Add Recipe</Link>
+          <div>("back" will display none on home page.)</div>
+          <div>("+ Add Recipe" will display none on addRecipePage page.)</div>
         </div>
       </div>
       

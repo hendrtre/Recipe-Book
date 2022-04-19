@@ -18,7 +18,7 @@ export const Recipes = [
     },
     {
       title: "Voluptas praesentium facere?",
-      direction0:
-        "Blanditiis aliquid adipisci quisquam reiciendis voluptates itaque.",
+      ingredient0: ['Flour','Sugar','Eggs'],
+      direction0: ['Burn it!', 'Grill it!', 'Fry it!'],
     },
   ];
