@@ -61,22 +61,35 @@ function AddRecipePage() {
                             </label>
                         </div>
                     </div>
+                    
                     <div className='instruction-form'>
+                        <div className='add-instruction'>
+                            <button>+ Add Step</button>
+                        </div>
                         <label>
                             Steps/Directions:
                             <textarea placeholder="Write instruction here..." />
                         </label>
+                        <div className='delete-instruction'>
+                            <button>&#10005; Delete</button>
+                        </div>
                     </div>
                     <div className='measurements-form'>
+                        <div className='add-measurement'>
+                            <button>+ Add Ingredient</button>
+                        </div>
                         <label>
                             Ingredients:
                             <textarea placeholder='Write ingredient with measurement here...' />
                         </label>
+                        <div className='delete-measurement'>
+                            <button>&#10005; Delete</button>
+                        </div>
+                    </div>
+                    <div className='finialSubmit'>
+                        <input className='finialSubmitBTN' type="submit" value="+ Add New Recipe" />
                     </div>
                 </form>
-                <div className='finialSubmit'>
-                    <input className='finialSubmitBTN' type="submit" value="+ Add New Recipe" />
-                </div>
             </div>
         </div>
     )

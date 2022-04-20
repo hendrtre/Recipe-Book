@@ -16,16 +16,26 @@ body {
   /* background: black; */
   color: #444;
   /* background-image: url("./images/ColorFoodWallpaperL25.png"); */
-  background-image: url("./images/FoodWallpaper50.png");
+  background-image: url("./images/FoodWallpaper25.png");
   /* background-image: url("./images/FoodWallpaper.jpg"); */
 }
-/* #root {background-image: url("./images/FoodWallpaper.jpg"); opacity: 0.5;} */
+
 .container {
   /* background-color: lime; */
   max-width: 600px;
   margin: 2rem auto 4rem;
   padding: 0 10px;
   text-align: center;
+}
+.container h1 { 
+  /* background-color: #f7f7f7; */
+  background-color: #ededed;
+  /* background-color: #e6e6e6; */
+  /* background-color: #dbdbdb; */
+  color: #AE0000;
+  border-left: 3px solid grey;
+  border-top: 3px solid grey;
+  border-right: 3px solid grey;
 }
 .Links {
   max-width: 600px;
@@ -86,7 +96,8 @@ body {
 }
 
 .direction {
-  background-color: #f7f7f7;
+  /* background-color: #f7f7f7; */
+  background-color: #ededed;
   padding: 20px;
 }
 
@@ -108,33 +119,57 @@ body {
   /* height: 100px; */
 }
 
-.form-holder { text-align: left; }
+.form-holder { 
+  padding: 8px 10px 5px 10px;
+  /* background-color: #f7f7f7; */
+  background-color: #ededed;
+  /* background-color: #e6e6e6; */
+  /* background-color: #e0e0e0; */
+  /* background-color: #dbdbdb; */
+  border-left:3px solid grey;
+  border-bottom:3px solid grey;
+  border-right:3px solid grey;
+  text-align: left; 
+}
 .form-holder label { color: black; font-size: 16px; }
-.title-form { background-color: red; }
-.image-form { background-color: orangered; }
-.time-form { background-color: orange; }
-.instruction-form { background-color: yellow; }
-.measurements-form { background-color: yellowgreen; }
+/* .title-form { background-color: red; } */
+/* .image-form { background-color: orangered; } */
+/* .time-form { background-color: orange; } */
+.instruction-form { 
+  display:grid; 
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+.measurements-form { 
+  display:grid; 
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+/* .finialSubmit { background: green; } */
 .title-form input {
-  width: 98%;
+  width: 100%;
   padding: 12px 20px;
-  margin: 8px 5px 8px 5px;
+  /* margin: 8px 5px 8px 5px; */
   /* margin: 8px 0; */
   display: inline-block;
-  border: 2px solid blue;
+  border: 2px solid navy;
   /* border: 2px solid #ccc; */
   border-radius: 5px;
   outline: none;
   transition: 0.5s;
 }
-.title-form input:focus { border: 2px solid red;}
+.title-form input:focus { border: 2px solid blue;}
 .image-form input {
-  width: 98%;
+  width: 100%;
   padding: 12px 20px;
   /* margin: 8px 0; */
-  margin: 8px 5px 8px 5px;
+  /* margin: 8px 5px 8px 5px; */
   display: inline-block;
-  border: 2px solid blue;
+  border: 2px solid navy;
   border-radius: 5px;
 }
 .time-form {
@@ -142,7 +177,7 @@ body {
 }
 .prep-form {
   width: 100%;
-  padding: 6px 20px;
+  padding: 6px 0;
   margin: 8px 5px 8px 5px;
   /* border: 2px solid blue;
   border-radius: 5px; */
@@ -151,15 +186,15 @@ body {
   width: 70px;
   margin-left: 5px;
   display: inline-block;
-  border: 2px solid blue;
+  border: 2px solid navy;
   border-radius: 3px;
   outline: none;
   transition: 0.5s;
 }
-.prep-form input:focus { border: 2px solid red; }
+.prep-form input:focus { border: 2px solid blue; }
 .cook-form {
   width: 100%;
-  padding: 6px 20px;
+  padding: 6px 0;
   margin: 8px 5px 8px 5px;
   /* border: 2px solid blue;
   border-radius: 5px; */
@@ -168,19 +203,19 @@ body {
   width: 70px;
   margin-left: 5px;
   display: inline-block;
-  border: 2px solid blue;
+  border: 2px solid navy;
   border-radius: 3px;
   outline: none;
   transition: .5s;
 }
-.cook-form input:focus { border: 2px solid red; }
+.cook-form input:focus { border: 2px solid blue; }
 .form-holder textarea {
   width: 100%;
   height: 90px;
   padding: 12px 20px;
   box-sizing: border-box;
   /* border: 2px solid #ccc; */
-  border: 2px solid blue;
+  border: 2px solid navy;
   border-radius: 4px;
   background-color: white;
   font-size: 16px;
@@ -189,8 +224,48 @@ body {
   transition: 0.5s;
   outline: none;
 }
-.form-holder textarea:focus { border: 2px solid red; }
-.finialSubmit { background: green; }
+.form-holder textarea:focus { border: 2px solid blue; }
+.instruction-form button { 
+  width: 125px;
+  height: 40px; 
+  float: right;
+  color: white;
+  border: none;
+}
+.instruction-form button:hover { background-color: red; }
+.add-instruction button { 
+  background-color: blue; 
+  border-radius: 10px; 
+  cursor: pointer;
+}
+.delete-instruction button { 
+  /* position: absolute; */
+  background-color: blue; 
+  width: 75px;
+  height: 30px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.measurements-form button { 
+  width: 125px; 
+  height: 40px;
+  float: right;
+  color: white;
+  border: none;
+}
+.measurements-form button:hover { background-color: red; }
+.add-measurement button { 
+  background-color: blue; 
+  border-radius: 10px;
+  cursor: pointer;
+}
+.delete-measurement button {
+  background-color: blue;
+  width: 75px;
+  height: 30px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
 .finialSubmitBTN { 
   background-color: #AE0000; 
   color: White;
@@ -201,4 +276,6 @@ body {
   margin: 10px;
   border: none;
   border-radius: 7px;
+  cursor: pointer;
 }
+.finialSubmitBTN:hover { background-color: #FF0B0B; }
