@@ -5,13 +5,23 @@
 }
 h1 { color: red; }
 body {
+  position: relative;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; */
   font-family: "Segoe UI", Arial, sans-serif;
-  line-height: 1.4;
-  background: #fff;
+  line-height: 1.4;  
+  /* background: #fff; */
+  /* background: black; */
   color: #444;
+  /* background-image: url("./images/ColorFoodWallpaperL25.png"); */
+  background-image: url("./images/FoodWallpaper50.png");
+  /* background-image: url("./images/FoodWallpaper.jpg"); */
 }
-
+/* #root {background-image: url("./images/FoodWallpaper.jpg"); opacity: 0.5;} */
 .container {
+  /* background-color: lime; */
   max-width: 600px;
   margin: 2rem auto 4rem;
   padding: 0 10px;
@@ -98,6 +108,97 @@ body {
   /* height: 100px; */
 }
 
-.form-holder {
-  text-align: left;
+.form-holder { text-align: left; }
+.form-holder label { color: black; font-size: 16px; }
+.title-form { background-color: red; }
+.image-form { background-color: orangered; }
+.time-form { background-color: orange; }
+.instruction-form { background-color: yellow; }
+.measurements-form { background-color: yellowgreen; }
+.title-form input {
+  width: 98%;
+  padding: 12px 20px;
+  margin: 8px 5px 8px 5px;
+  /* margin: 8px 0; */
+  display: inline-block;
+  border: 2px solid blue;
+  /* border: 2px solid #ccc; */
+  border-radius: 5px;
+  outline: none;
+  transition: 0.5s;
+}
+.title-form input:focus { border: 2px solid red;}
+.image-form input {
+  width: 98%;
+  padding: 12px 20px;
+  /* margin: 8px 0; */
+  margin: 8px 5px 8px 5px;
+  display: inline-block;
+  border: 2px solid blue;
+  border-radius: 5px;
+}
+.time-form {
+  display: flex;
+}
+.prep-form {
+  width: 100%;
+  padding: 6px 20px;
+  margin: 8px 5px 8px 5px;
+  /* border: 2px solid blue;
+  border-radius: 5px; */
+}
+.prep-form input {
+  width: 70px;
+  margin-left: 5px;
+  display: inline-block;
+  border: 2px solid blue;
+  border-radius: 3px;
+  outline: none;
+  transition: 0.5s;
+}
+.prep-form input:focus { border: 2px solid red; }
+.cook-form {
+  width: 100%;
+  padding: 6px 20px;
+  margin: 8px 5px 8px 5px;
+  /* border: 2px solid blue;
+  border-radius: 5px; */
+}
+.cook-form input {
+  width: 70px;
+  margin-left: 5px;
+  display: inline-block;
+  border: 2px solid blue;
+  border-radius: 3px;
+  outline: none;
+  transition: .5s;
+}
+.cook-form input:focus { border: 2px solid red; }
+.form-holder textarea {
+  width: 100%;
+  height: 90px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  /* border: 2px solid #ccc; */
+  border: 2px solid blue;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  /* resize: none; */
+  transition: 0.5s;
+  outline: none;
+}
+.form-holder textarea:focus { border: 2px solid red; }
+.finialSubmit { background: green; }
+.finialSubmitBTN { 
+  background-color: #AE0000; 
+  color: White;
+  font-size: 18px;
+  /* font-weight: bold; */
+  width: 96%;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 7px;
 }
