@@ -13,16 +13,25 @@ const Accordion = () => {
     }
 
   return (
-    <ul className="accordion">
-      {Recipes.map((Recipe, index) => (
-        <AccordionItem 
-         onToggle={() => handleToggle(index)}
-         active={clicked === index}
-         key={index} 
-         Recipe={Recipe} 
-         />
-      ))}
-    </ul>
+    <div>
+      <div>
+        <input 
+          type="text" 
+          placeholder="Search Recipes..." 
+          // onChange={handleFilter}
+        />
+      </div>
+      <ul className="accordion">
+        {Recipes.map((Recipe, index) => (
+          <AccordionItem 
+          onToggle={() => handleToggle(index)}
+          active={clicked === index}
+          key={index} 
+          Recipe={Recipe} 
+          />
+        ))}
+      </ul>
+    </div>
   );
 };
 

@@ -1,7 +1,9 @@
 import { useRef } from "react"
+// import Ratat from "./../images/{coverImage}"
+import Ratat from "./../images/ratatouille.jpg"
 
 const AccordionItem = ({ Recipe, onToggle, active }) => {
-    const { title, direction0, direction1, direction2, prepTime, cookTime, totalTime, ingredient0, ingredient1, ingredient2 } = Recipe;
+    const { title, direction0, direction1, direction2, prepTime, cookTime, totalTime, ingredient0, ingredient1, ingredient2, coverImage } = Recipe;
 
     const contentEl = useRef();
 
@@ -12,9 +14,11 @@ const AccordionItem = ({ Recipe, onToggle, active }) => {
           <span className="control">{active ? "—" : "+"} </span>
         </button>
         <div ref={contentEl} className="direction_wrapper" style={ active ? { height: contentEl.current.scrollHeight } : { height: "0px" } }>
-            {/* <div>
-              <img src={testImage} alt="test"></img>
-            </div> */}
+            <div>
+              {/* <img src={Ratat} alt="test"></img> */}
+            </div>
+            <img src={coverImage} alt="test"></img>
+            <p>{coverImage}</p>
             <div className="time-frame">
               <div className="prep-time">Prep Time: {prepTime}</div>
               <div className="cook-time">Cook Time: {cookTime}</div>
