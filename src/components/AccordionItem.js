@@ -1,5 +1,4 @@
 import { useRef } from "react"
-import { testImage } from "./../images/pirateCoin.jpg"
 
 const AccordionItem = ({ Recipe, onToggle, active }) => {
     const { title, direction0, direction1, direction2, prepTime, cookTime, totalTime, ingredient0, ingredient1, ingredient2 } = Recipe;
@@ -16,9 +15,11 @@ const AccordionItem = ({ Recipe, onToggle, active }) => {
             {/* <div>
               <img src={testImage} alt="test"></img>
             </div> */}
-            <div className="prep-time">Prep Time: {prepTime}</div>
-            <div className="cook-time">Cook Time: {cookTime}</div>
-            <div className="total-time">Total Time: {totalTime}</div>
+            <div className="time-frame">
+              <div className="prep-time">Prep Time: {prepTime}</div>
+              <div className="cook-time">Cook Time: {cookTime}</div>
+              <div className="total-time">Total Time: {totalTime}</div>
+            </div>
             <h3>Ingredients</h3>
             <div className="ingredient">{ingredient0}</div>
             <div className="ingredient">{ingredient1}</div>

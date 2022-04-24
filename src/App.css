@@ -95,10 +95,35 @@ body {
   font-size: 20px;
 }
 
+.time-frame { 
+  display: flex; 
+  background-color: #ededed;
+  text-align: center; 
+}
+.prep-time { 
+  width: 100%; 
+  padding: 15px 0;
+}
+.cook-time { 
+  width: 100%; 
+  padding: 15px 0;
+}
+.total-time { 
+  width: 100%; 
+  padding: 15px 0; 
+}
+.direction_wrapper h3 {
+  background-color: #ededed;
+  padding: 0 20px;
+}
+.ingredient {
+  padding: 0 10px;
+  background-color: #ededed;
+}
 .direction {
   /* background-color: #f7f7f7; */
   background-color: #ededed;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
 }
 
 /* activate toggle */
