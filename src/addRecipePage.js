@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function AddRecipePage() {
+    const [newTitle, setTitle] = useState("")
+    const [newPrep, setPrep] = useState("")
+    const [newCook, setCook] = useState("")
+
+    const [formDirection, setFormDirection] = useState([{direction0: ""}])
+    const [formIngredient, setFormIngredient] = useState([{ingredient0: ""}])
+
     return (
         <div className='container'>
             <h1>Add New Recipe</h1>
             <div className='form-holder'>
-                {/* <div className='title-form'> */}
                 <form>
                     <div className='title-form'>
                         <label>
@@ -14,12 +20,12 @@ function AddRecipePage() {
                         </label>
                     </div>
 
-                    <div className='image-form'>
+                    {/* <div className='image-form'>
                         <label>
                             Cover Image: 
                             <input type="file" name='coverImage' />
                         </label>
-                    </div>
+                    </div> */}
 
                     <div className='time-form'>
                         <div className='prep-form'>

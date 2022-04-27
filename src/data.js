@@ -1,14 +1,7 @@
-import rat from "./../src/images/ratatouille.jpg"
-import rawSteak from "./images/uncookSteak.jpg"
-import broc from "./images/broccoli.jpg"
-
-export const Recipes = [
+// export const Recipes = [
+export const Data = [
     {
       title: "Ratatouille",
-      // coverImage: "ratatouille.jpg",
-      // coverImage: "./../images/ratatouille.jpg",
-      // coverImage: "static/media/ratatouille.jpg",
-      coverImage: rat,
       prepTime: "30mins",
       cookTime: "60mins",
       totalTime: "1 hr, 30mins",
@@ -21,13 +14,11 @@ export const Recipes = [
     },
     {
       title: "Dignissimos sequi architecto?",
-      coverImage: rawSteak ,
       direction0:
         "Aperiam ab atque incidunt dolores ullam est, earum ipsa recusandae velit cumque. Aperiam ab atque incidunt dolores ullam est, earum ipsa recusandae velit cumque.",
     },
     {
       title: "Voluptas praesentium facere?",
-      coverImage: broc,
       ingredient0: ['Flour','Sugar','Eggs'],
       direction0: ['Burn it!', 'Grill it!', 'Fry it!'],
     },
