@@ -1,22 +1,45 @@
 import React, { useState } from 'react'
 
 function AddRecipePage() {
-    const [newTitle, setTitle] = useState("")
-    const [newPrep, setPrep] = useState("")
-    const [newCook, setCook] = useState("")
+
+    const [newRecipe, setNewRecipe] = useState("")
+    const [title, setTitle] = useState("")
+    const [prepHour, setPrepHour] = useState("")
+    const [prepMin, setPrepMin] = useState("")
+    const [cookHour, setCookHour] = useState("")
+    const [cookMin, setCookMin] = useState("")
+    const [stepDir, setStepDir] = useState("")
+    const [ingr, setIngr] = useState("")
 
     const [formDirection, setFormDirection] = useState([{direction0: ""}])
     const [formIngredient, setFormIngredient] = useState([{ingredient0: ""}])
+
+    function handleButtonSubmit(event) { 
+        event.preventDefault()
+        console.log(title)
+        console.log(prepHour)
+        console.log(prepMin)
+        console.log(cookHour)
+        console.log(cookMin)
+        console.log(stepDir)
+        console.log(ingr)
+    }
 
     return (
         <div className='container'>
             <h1>Add New Recipe</h1>
             <div className='form-holder'>
-                <form>
+                <form onSubmit={handleButtonSubmit}>
                     <div className='title-form'>
                         <label>
                             Title: 
-                            <input type="text" name="Title" placeholder='Name of Recipe...' />
+                            <input 
+                                type="text" 
+                                name="Title" 
+                                placeholder='Name of Recipe...' 
+                                onChange={(e) => setTitle(e.target.value)} 
+                                // value={title}
+                            />
                         </label>
                     </div>
 
@@ -35,6 +58,7 @@ function AddRecipePage() {
                                     name="numberOfHoursPrep"
                                     type="number"
                                     placeholder='Hours'
+                                    onChange={(e) => setPrepHour(e.target.value)}
                                     // value={this.state.numberOfGuests}
                                     // onChange={this.handleInputChange} 
                                 />
@@ -42,6 +66,7 @@ function AddRecipePage() {
                                     name="numberOfMinutesPrep"
                                     type="number"
                                     placeholder='Minutes'
+                                    onChange={(e) => setPrepMin(e.target.value)}
                                     // value={this.state.numberOfGuests}
                                     // onChange={this.handleInputChange} 
                                 />
@@ -54,6 +79,7 @@ function AddRecipePage() {
                                     name="numberOfHoursCook"
                                     type="number"
                                     placeholder='Hours'
+                                    onChange={(e) => setCookHour(e.target.value)}
                                     // value={this.state.numberOfGuests}
                                     // onChange={this.handleInputChange} 
                                 />
@@ -61,6 +87,7 @@ function AddRecipePage() {
                                     name="numberOfMinutesCook"
                                     type="number"
                                     placeholder='Minutes'
+                                    onChange={(e) => setCookMin(e.target.value)}
                                     // value={this.state.numberOfGuests}
                                     // onChange={this.handleInputChange} 
                                 />
@@ -74,26 +101,38 @@ function AddRecipePage() {
                         </div>
                         <label>
                             Steps/Directions:
-                            <textarea placeholder="Write instruction here..." />
+                            <textarea 
+                                placeholder="Write instruction here..." 
+                                onChange={(e) => setStepDir(e.target.value)}
+                            />
                         </label>
                         <div className='delete-instruction'>
                             <button>&#10005; Delete</button>
                         </div>
                     </div>
+
                     <div className='measurements-form'>
                         <div className='add-measurement'>
                             <button>+ Add Ingredient</button>
                         </div>
                         <label>
                             Ingredients:
-                            <textarea placeholder='Write ingredient with measurement here...' />
+                            <textarea 
+                                placeholder='Write ingredient with measurement here...' 
+                                onChange={(e) => setIngr(e.target.value)}
+                            />
                         </label>
                         <div className='delete-measurement'>
                             <button>&#10005; Delete</button>
                         </div>
                     </div>
+
                     <div className='finialSubmit'>
-                        <input className='finialSubmitBTN' type="submit" value="+ Add New Recipe" />
+                        <input 
+                            className='finialSubmitBTN' 
+                            type="submit" 
+                            value="+ Add New Recipe" 
+                        />
                     </div>
                 </form>
             </div>

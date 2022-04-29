@@ -3,8 +3,8 @@ import { useState } from "react";
 import { Data } from "../data";
 import AccordionItem from "./AccordionItem";
 const originalRecipe = Data
-console.log(Data)
-console.log(originalRecipe)
+// console.log(Data)
+// console.log(originalRecipe)
 const Accordion = () => {
     const [clicked, setClicked] = useState("0")
 
