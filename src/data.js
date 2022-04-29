@@ -1,9 +1,14 @@
-// export const Recipes = [
-export const Data = [
+import * as React from 'react'
+
+let RecipesContext = React.createContext()
+
+let Data = [
     {
       title: "Ratatouille",
-      prepTime: "30mins",
-      cookTime: "60mins",
+      prepTimeHour: "0",
+      prepTimeMin: "30",
+      cookTimeHour: "0",
+      cookTimeMin: "60",
       totalTime: "1 hr, 30mins",
       ingredient0: "1-2 Cup(s) Tomato Sauce (good quality tomato basil sauce",
       ingredient1: "2 Garlic (cloves, minced)",
@@ -13,13 +18,26 @@ export const Data = [
       direction2: "test to see if this thing works",
     },
     {
-      title: "Dignissimos sequi architecto?",
-      direction0:
-        "Aperiam ab atque incidunt dolores ullam est, earum ipsa recusandae velit cumque. Aperiam ab atque incidunt dolores ullam est, earum ipsa recusandae velit cumque.",
+      title: "Beef Ramen",
+      prepTimeHour: "0",
+      prepTimeMin: "15",
+      cookTimeHour: "0",
+      cookTimeMin: "30",
+      ingredient0: ['1 tbsp Vegtable Oil', '5cm piece ginger, grated', '2 garlic cloves, crushed', '50g spring onions, sliced, greens and whites separated', '2 beef stock cubes, made up to 1.25Ltr', '2 tbsp light soy sauce', '1 tsp sugar', '395g pack Boswell Farms thin cut beef steaks', '150g sugarsnaps', '250 g fine egg noodles'],
+      direction0: ['Heat the oil in a large saucepan on a medium heat. Fry the ginger, garlic and white parts of the spring onion for 2 mins until golden and fragrant. Pour the stock into the pan and cover. Simmer for 5mins.', 'Add the soy sauce and sugar to the broth. Thinly slice the beef steak into 1cm strips. Add to the broth with the sugar snaps and noodles. Cook for 5 mins over a medium high heat until the beef is cooked through and the noodles are tender.', 'Divide the ramen between 4 bowls. Scatter with the greens of the spring onions to serve.'],
+
     },
     {
       title: "Voluptas praesentium facere?",
       ingredient0: ['Flour','Sugar','Eggs'],
       direction0: ['Burn it!', 'Grill it!', 'Fry it!'],
     },
-  ];
+];
+
+let reducer = (state, action) => {
+  // This will update the data 
+}
+
+
+
+export { Data, }

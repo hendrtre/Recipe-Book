@@ -2,13 +2,12 @@ import { useState } from "react";
 // import { Recipes } from "../data";
 import { Data } from "../data";
 import AccordionItem from "./AccordionItem";
-const originalRecipe = Data
-// console.log(Data)
-// console.log(originalRecipe)
+
 const Accordion = () => {
     const [clicked, setClicked] = useState("0")
 
     const [recipes, setRecipes] = useState(Data)
+    // USE CONTEXT HERE, replace line above with context.
 
     function updateData() {
       var searchText = document.getElementById("Search").value
