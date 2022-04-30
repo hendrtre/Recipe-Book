@@ -68,7 +68,7 @@ body {
 
 .accordion_item {
   border-top: 1px solid #9f9f9f;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 .button:hover {
@@ -89,6 +89,16 @@ body {
   padding: 18px 8px;
   cursor: pointer;
   border: none;
+}
+
+.Search-Bar input{
+  width: 300px;
+  padding: 12px 20px;
+  margin: 10px;
+  border: 2px solid navy;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.5s;
 }
 
 .control {
@@ -306,31 +316,37 @@ body {
 .finialSubmitBTN:hover { background-color: #FF0B0B; }
 
 
+
 /* SLick SLider */
 .slick-track {
   display: flex;
 }
-
 .slick-slide {
   display: flex;
-  height: 230px;
+  height: 240px;
   text-align: center;
   align-items: center;
   justify-content: center;
-  margin: 0 10px;
+  margin: 0 51px;
 }
-.slick-list {margin: 0, -10px;}
+/* .slick-list {margin: 0, -10px;} */
 .slick-slide { 
   display: inline-block;
+  padding-top: 10px;
+  background-color: #ededed;
 }
 .slick-slide img {
+  background-color: #ededed;
   margin: 0 auto;
   height: 200px;
   text-align: center;
+  border-radius: 10px;
 }
 .Slider-container {
   padding-bottom: 30px;
 }
 .slick-dots {
   background-color: #ededed;
+  border-radius: 50px;
 }
+.slick-arrow button { background-color: black;}

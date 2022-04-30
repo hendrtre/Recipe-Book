@@ -1,11 +1,12 @@
 import React from 'react'
 import './App.css';
-import {BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
 
 import Home from './components/Home'; 
 import AddRecipePage from './addRecipePage';
 
 function App() {
+  // const location = useLocation()
 
   return (
     <Router>
@@ -14,8 +15,6 @@ function App() {
         <div className='pages'>
           <Link to="/">Back</Link>
           <Link to="/add-recipe">+ Add Recipe</Link>
-          <div>("back" will display none on home page.)</div>
-          <div>("+ Add Recipe" will display none on addRecipePage page.)</div>
         </div>
       </div>
       

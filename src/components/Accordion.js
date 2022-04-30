@@ -40,12 +40,12 @@ const Accordion = () => {
     }
 
   return (
-    <div>
-      <div>
+    <div className="Accordion-Container">
+      <div className="Search-Bar">
         <input 
           id="Search"
           type="text" 
-          placeholder="Accordion..." 
+          placeholder="Search Recipe Book..." 
           onChange={runChange}
         />
       </div>
