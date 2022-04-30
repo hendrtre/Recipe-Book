@@ -304,3 +304,33 @@ body {
   cursor: pointer;
 }
 .finialSubmitBTN:hover { background-color: #FF0B0B; }
+
+
+/* SLick SLider */
+.slick-track {
+  display: flex;
+}
+
+.slick-slide {
+  display: flex;
+  height: 230px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+.slick-list {margin: 0, -10px;}
+.slick-slide { 
+  display: inline-block;
+}
+.slick-slide img {
+  margin: 0 auto;
+  height: 200px;
+  text-align: center;
+}
+.Slider-container {
+  padding-bottom: 30px;
+}
+.slick-dots {
+  background-color: #ededed;
+}
