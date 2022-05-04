@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 
 
 function AddRecipePage() {
-
     const [newRecipe, setNewRecipe] = useState("")
     const [title, setTitle] = useState("")
     const [prepHour, setPrepHour] = useState("")
@@ -12,10 +11,16 @@ function AddRecipePage() {
     const [stepDir, setStepDir] = useState("")
     const [ingr, setIngr] = useState("")
 
-    const [formDirection, setFormDirection] = useState([{direction0: ""}])
-    const [formIngredient, setFormIngredient] = useState([{ingredient0: ""}])
+
+
+    // const [formDirection, setFormDirection] = useState([{direction0: ""}])
+    // const [formIngredient, setFormIngredient] = useState([{ingredient0: ""}])
 
     function handleButtonSubmit(event) { 
+        // dispatch({
+        //     type: "ADD_RECIPE",
+        //     payload: 
+        //   })
         event.preventDefault()
         console.log(title)
         console.log(prepHour)

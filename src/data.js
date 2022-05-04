@@ -34,10 +34,53 @@ let Data = [
     },
 ];
 
-let reducer = (state, action) => {
-  // This will update the data 
+let Reducer = (state, action) => {
+  switch (action.type) {
+    case 'ADD_RECIPE':
+      return {
+        ...state, 
+        title: state.title.concat(action.payload),
+        prepTimeHour: state.prepTimeHour.concat(action.payload),
+        prepTimeMin: state.prepTimeMin.concat(action.payload),
+        cookTimeHour: state.cookTimeHour.concat(action.payload),
+        cookTimeMin: state.cookTimeMin.concat(action.payload),
+        ingredient0: state.ingredient0.concat(action.payload),
+        direction0: state.direction0.concat(action.payload)
+      }
+    case 'REMOVE_POST':
+      return {
+        ...state,
+        title: state.title.filter(title => title.id !== action.payload),
+        prepTimeHour: state.prepTimeHour.filter(prepTimeHour => prepTimeHour.id !== action.payload),
+        prepTimeMin: state.prepTimeMin.filter(prepTimeMin => prepTimeMin.id !== action.payload),
+        cookTimeHour: state.cookTimeHour.filter(cookTimeHour => cookTimeHour.id !== action.payload),
+        cookTimeMin: state.cookTimeMin.filter(cookTimeMin => cookTimeMin.id !== action.payload),
+        direction0: state.direction0.filter(direction0 => direction0.id !== action.payload),
+        ingredient0: state.ingredient0.filter(ingredient0 => ingredient0.id !== action.payload),
+      }
+    case 'Search':
+      const filtered = state.filter((recipe) => {        
+          return recipe["title"].toLocaleLowerCase().includes(action.payload.toLocaleLowerCase())
+      })
+      return filtered
+
+    default: 
+      return state
+  }
 }
 
 
+const RecipeProvider = ({children}) => {
+  const [recipes, dispatch] = React.useReducer(Reducer, Data)
+  const value = {recipes, dispatch}
+  return (
+    <RecipesContext.Provider value={value}>
+      {children}
+    </RecipesContext.Provider>
+  )
+}
 
-export { Data, }
+let RecipeConsumer = RecipesContext.Consumer
+
+
+export { Data, RecipesContext, RecipeProvider, RecipeConsumer }
