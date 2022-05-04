@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
+// import { RecipesContext } from './data' 
 
 
 function AddRecipePage() {
-    const [newRecipe, setNewRecipe] = useState("")
+    // const [newRecipe, setNewRecipe] = useState("")
     const [title, setTitle] = useState("")
     const [prepHour, setPrepHour] = useState("")
     const [prepMin, setPrepMin] = useState("")
@@ -11,17 +12,18 @@ function AddRecipePage() {
     const [stepDir, setStepDir] = useState("")
     const [ingr, setIngr] = useState("")
 
+    // let [title, dispatch] = useContext(RecipesContext)
+    // let [prepHour, dispatch] = useContext(RecipesContext)
 
+    // let { recipes, dispatch } = useContext(RecipesContext)
 
-    // const [formDirection, setFormDirection] = useState([{direction0: ""}])
-    // const [formIngredient, setFormIngredient] = useState([{ingredient0: ""}])
 
     function handleButtonSubmit(event) { 
+        event.preventDefault()
         // dispatch({
         //     type: "ADD_RECIPE",
-        //     payload: 
+        //     payload: event.target.value
         //   })
-        event.preventDefault()
         console.log(title)
         console.log(prepHour)
         console.log(prepMin)

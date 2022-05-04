@@ -63,6 +63,17 @@ let Reducer = (state, action) => {
           return recipe["title"].toLocaleLowerCase().includes(action.payload.toLocaleLowerCase())
       })
       return filtered
+      // if (action.payload.length == 0) {
+      //   return filtered
+
+      //   // setRecipes(Data)
+      //   // dispatch({
+      //   //   type: ""
+      //   // })
+      // } else {
+      //   // setRecipes(filtered)
+      //   return filtered
+      // }
 
     default: 
       return state

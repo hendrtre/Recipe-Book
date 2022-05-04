@@ -72,7 +72,8 @@ body {
 }
 
 .button:hover {
-  background: red;
+  /* background: red; */
+  background-color: #02adbf;
 }
 
 .button {
@@ -138,7 +139,8 @@ body {
 
 /* activate toggle */
 .accordion_item.active .button:hover {
-  background: blueviolet;
+  /* background: blueviolet; */
+  background: #008593;
 }
 .accordion_item.active .button {
   background-color: #105057;
@@ -273,9 +275,10 @@ body {
   border-radius: 10px; 
   cursor: pointer;
 }
+.delete-instruction button:hover {background-color: orangered;}
 .delete-instruction button { 
   /* position: absolute; */
-  background-color: blue; 
+  background-color: red; 
   width: 75px;
   height: 30px;
   margin-bottom: 20px;
@@ -294,8 +297,9 @@ body {
   border-radius: 10px;
   cursor: pointer;
 }
+.delete-measurement button:hover { background-color: orangered; }
 .delete-measurement button {
-  background-color: blue;
+  background-color: red;
   width: 75px;
   height: 30px;
   margin-bottom: 20px;
@@ -350,3 +354,4 @@ body {
   border-radius: 50px;
 }
 .slick-arrow button { background-color: black;}
+

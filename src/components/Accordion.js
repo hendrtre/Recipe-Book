@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 // import { Recipes } from "../data";
-import { Data } from "../data";
+// import { Data } from "../data";
 import AccordionItem from "./AccordionItem";
 
 import { RecipesContext } from "../data"; 
